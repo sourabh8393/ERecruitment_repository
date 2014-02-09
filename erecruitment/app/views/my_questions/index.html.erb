@@ -1,0 +1,43 @@
+<h1>Listing my_questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Option a</th>
+      <th>Option b</th>
+      <th>Option c</th>
+      <th>Option d</th>
+      <th>Anwser</th>
+      <th>Question type</th>
+      <th>Created by</th>
+      <th>Difficulty level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_questions.each do |my_question| %>
+      <tr>
+        <td><%= my_question.question %></td>
+        <td><%= my_question.option_a %></td>
+        <td><%= my_question.option_b %></td>
+        <td><%= my_question.option_c %></td>
+        <td><%= my_question.option_d %></td>
+        <td><%= my_question.anwser %></td>
+        <td><%= my_question.question_type %></td>
+        <td><%= my_question.created_by %></td>
+        <td><%= my_question.difficulty_level %></td>
+        <td><%= link_to 'Show', my_question %></td>
+        <td><%= link_to 'Edit', edit_my_question_path(my_question) %></td>
+        <td><%= link_to 'Destroy', my_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My question', new_my_question_path %>
