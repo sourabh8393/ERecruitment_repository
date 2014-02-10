@@ -4,7 +4,7 @@ class MyQuestionsController < ApplicationController
   # GET /my_questions
   # GET /my_questions.json
   def index
-    @my_questions = MyQuestion.all
+    @my_questions = My_question.all
   end
 
   # GET /my_questions/1
@@ -14,7 +14,7 @@ class MyQuestionsController < ApplicationController
 
   # GET /my_questions/new
   def new
-    @my_question = MyQuestion.new
+    @my_question = My_question.new
   end
 
   # GET /my_questions/1/edit
@@ -24,7 +24,7 @@ class MyQuestionsController < ApplicationController
   # POST /my_questions
   # POST /my_questions.json
   def create
-    @my_question = MyQuestion.new(my_question_params)
+    @my_question = My_question.new(my_question_params)
 
     respond_to do |format|
       if @my_question.save
@@ -64,7 +64,7 @@ class MyQuestionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_my_question
-      @my_question = MyQuestion.find(params[:id])
+      @my_question = My_question.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
