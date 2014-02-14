@@ -1,4 +1,5 @@
 Erecruitment::Application.routes.draw do
+
   get 'admin' => 'admin#index'
  
 controller :sessions do
@@ -8,6 +9,9 @@ controller :sessions do
 end
   
   resources :users
+
+
+  get "testpaper/index"
 
   resources :my_questions
 
