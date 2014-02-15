@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 		else
 			if user.role=="Candidate"
 				session[:user_id]=user.id
-				redirect_to user_homepage_url
+				redirect_to candidates_index_url
 			end
 		end
 	else
