@@ -26,6 +26,7 @@
 </div>
 <% end %>
 <% count=count+1 %>
-<%= link_to "NEXT", testpaper_index_<%=count%>_path %> 
+<%= will_paginate @my_questions %>
+
 <% end %>
 <% end %>
