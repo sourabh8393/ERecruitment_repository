@@ -3,12 +3,11 @@
 <table>
   <thead>
     
-    
+ 
   </thead>
 
   <tbody>
     <% @my_questions.each do |my_question| %>
-      
         <tr><td><b>Question: <%= my_question.question %></td></tr>
         <tr><td><b>Option a: <%= my_question.option_a %></td></tr>
         <tr><td><b>Option b: <%= my_question.option_b %></td></tr>
@@ -26,6 +25,6 @@
   </tbody>
 </table>
 
-<br>
+</br>
 
 <%= link_to 'New Question', new_my_question_path %>

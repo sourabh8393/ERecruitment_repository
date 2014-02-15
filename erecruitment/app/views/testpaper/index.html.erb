@@ -1,12 +1,14 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-
+ 
 <h1>question paper</h1>
-<% @my_questions.each do |my_question| %>
 
+
+
+<% @my_questions.each do |my_question| %>
 <div class="entry">
-	<% if my_question.question_type== "verbal" %>
+	 <% if my_question.question_type== "verbal" %>
 <h3><%= my_question.question %></h3>
 <h4><%= radio_button_tag(:option_a, "option_a") %>
 <%= label_tag(:option_a_label, my_question.option_a) %> </h4>
@@ -21,5 +23,5 @@
 <%= label_tag(:option_d_label, my_question.option_d) %> </h4>
 <% end %>
 </div>
-
+<%= will_paginate(@my_questions) %>
 <% end %>
