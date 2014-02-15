@@ -1,5 +1,8 @@
 Erecruitment::Application.routes.draw do
 
+  resources :test_questions
+
+  get "candidates/index"
   get 'admin' => 'admin#index'
  
 controller :sessions do

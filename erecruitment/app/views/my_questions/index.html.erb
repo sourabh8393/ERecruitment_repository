@@ -20,7 +20,7 @@
         <tr><td><%= link_to 'Show', my_question %></td></tr>
         <tr><td><%= link_to 'Edit', edit_my_question_path(my_question) %></td></tr>
         
-        <td><%= link_to 'Destroy', my_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Destroy', my_question, :method => :delete, data: { confirm: 'Are you sure?' } %></td>
       
     <% end %>
   </tbody>

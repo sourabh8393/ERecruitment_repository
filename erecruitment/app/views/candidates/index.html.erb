@@ -1,6 +1,4 @@
-<h1>Candidates#index</h1>
-//<p>Find me in app/views/candidates/index.html.erb</p>
-
-<h1> Welcome!!! <h1>
-
-<%= link_to 'Give Demo Test', my_questions_path %>
+<h1> welcome  </h1>
+<%= link_to 'Demo Test', testpaper_index_path%></br>
+<% user= session[:user_id]%>
+<%= link_to 'Edit Profile', edit_user_path(user) %>
