@@ -18,7 +18,7 @@ class TestQuestionsControllerTest < ActionController::TestCase
 
   test "should create test_question" do
     assert_difference('TestQuestion.count') do
-      post :create, test_question: { anwser: @test_question.anwser, option_a: @test_question.option_a, option_b: @test_question.option_b, option_c: @test_question.option_c, option_d: @test_question.option_d, question: @test_question.question }
+      post :create, test_question: { anwser: @test_question.anwser, created_by: @test_question.created_by, difficulty_level: @test_question.difficulty_level, option_a: @test_question.option_a, option_b: @test_question.option_b, option_c: @test_question.option_c, option_d: @test_question.option_d, question: @test_question.question, question_type: @test_question.question_type }
     end
 
     assert_redirected_to test_question_path(assigns(:test_question))
@@ -35,7 +35,7 @@ class TestQuestionsControllerTest < ActionController::TestCase
   end
 
   test "should update test_question" do
-    patch :update, id: @test_question, test_question: { anwser: @test_question.anwser, option_a: @test_question.option_a, option_b: @test_question.option_b, option_c: @test_question.option_c, option_d: @test_question.option_d, question: @test_question.question }
+    patch :update, id: @test_question, test_question: { anwser: @test_question.anwser, created_by: @test_question.created_by, difficulty_level: @test_question.difficulty_level, option_a: @test_question.option_a, option_b: @test_question.option_b, option_c: @test_question.option_c, option_d: @test_question.option_d, question: @test_question.question, question_type: @test_question.question_type }
     assert_redirected_to test_question_path(assigns(:test_question))
   end
 

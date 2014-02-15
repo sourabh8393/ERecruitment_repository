@@ -7,6 +7,9 @@ one:
   option_c: MyString
   option_d: MyString
   anwser: MyString
+  question_type: MyString
+  created_by: MyString
+  difficulty_level: 1
 
 two:
   question: MyText
@@ -15,3 +18,6 @@ two:
   option_c: MyString
   option_d: MyString
   anwser: MyString
+  question_type: MyString
+  created_by: MyString
+  difficulty_level: 1

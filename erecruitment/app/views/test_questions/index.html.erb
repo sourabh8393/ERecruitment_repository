@@ -3,7 +3,8 @@
 <% end %>
  
 <h1>question paper</h1>
-<% @my_questions.each do |my_question| %>
-<% Test_questions.question = my_question.question %>
-<%= Test_question.question %>
-<% end %>
+
+
+
+<%= will_paginate @my_questions %>
+

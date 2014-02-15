@@ -1,14 +1,13 @@
 class TestQuestionsController < ApplicationController
   before_action :set_test_question, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /test_questions
   # GET /test_questions.json
   def index
-    @test_questions = Test_question.all
-    @my_questions = My_question.all
+    @my_questions= My_question.paginate(:page => params[:page], :per_page => 1).order(:created_by)
+    #@test_questions = TestQuestion.create(@my_questions.attributes).paginate(:page => params[:page], :per_page => 1).order(:created_by)
+    
   end
-
-
 
   # GET /test_questions/1
   # GET /test_questions/1.json
@@ -72,6 +71,6 @@ class TestQuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def test_question_params
-      params.require(:test_question).permit(:question, :option_a, :option_b, :option_c, :option_d, :anwser)
+      params.require(:test_question).permit(:question, :option_a, :option_b, :option_c, :option_d, :anwser, :question_type, :created_by, :difficulty_level)
     end
 end

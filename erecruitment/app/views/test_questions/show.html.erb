@@ -30,5 +30,20 @@
   <%= @test_question.anwser %>
 </p>
 
+<p>
+  <strong>Question type:</strong>
+  <%= @test_question.question_type %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @test_question.created_by %>
+</p>
+
+<p>
+  <strong>Difficulty level:</strong>
+  <%= @test_question.difficulty_level %>
+</p>
+
 <%= link_to 'Edit', edit_test_question_path(@test_question) %> |
 <%= link_to 'Back', test_questions_path %>

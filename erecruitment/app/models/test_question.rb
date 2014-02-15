@@ -1,2 +1,2 @@
-class Test_question < ActiveRecord::Base
+class TestQuestion < ActiveRecord::Base
 end
