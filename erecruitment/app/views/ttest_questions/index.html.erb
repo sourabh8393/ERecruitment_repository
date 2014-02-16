@@ -1,0 +1,43 @@
+<h1>Listing ttest_questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Option a</th>
+      <th>Option b</th>
+      <th>Option c</th>
+      <th>Option d</th>
+      <th>Anwser</th>
+      <th>Question type</th>
+      <th>Created by</th>
+      <th>Difficulty level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ttest_questions.each do |ttest_question| %>
+      <tr>
+        <td><%= ttest_question.question %></td>
+        <td><%= ttest_question.option_a %></td>
+        <td><%= ttest_question.option_b %></td>
+        <td><%= ttest_question.option_c %></td>
+        <td><%= ttest_question.option_d %></td>
+        <td><%= ttest_question.anwser %></td>
+        <td><%= ttest_question.question_type %></td>
+        <td><%= ttest_question.created_by %></td>
+        <td><%= ttest_question.difficulty_level %></td>
+        <td><%= link_to 'Show', ttest_question %></td>
+        <td><%= link_to 'Edit', edit_ttest_question_path(ttest_question) %></td>
+        <td><%= link_to 'Destroy', ttest_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ttest question', new_ttest_question_path %>

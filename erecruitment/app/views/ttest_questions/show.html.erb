@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @ttest_question.question %>
+</p>
+
+<p>
+  <strong>Option a:</strong>
+  <%= @ttest_question.option_a %>
+</p>
+
+<p>
+  <strong>Option b:</strong>
+  <%= @ttest_question.option_b %>
+</p>
+
+<p>
+  <strong>Option c:</strong>
+  <%= @ttest_question.option_c %>
+</p>
+
+<p>
+  <strong>Option d:</strong>
+  <%= @ttest_question.option_d %>
+</p>
+
+<p>
+  <strong>Anwser:</strong>
+  <%= @ttest_question.anwser %>
+</p>
+
+<p>
+  <strong>Question type:</strong>
+  <%= @ttest_question.question_type %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @ttest_question.created_by %>
+</p>
+
+<p>
+  <strong>Difficulty level:</strong>
+  <%= @ttest_question.difficulty_level %>
+</p>
+
+<%= link_to 'Edit', edit_ttest_question_path(@ttest_question) %> |
+<%= link_to 'Back', ttest_questions_path %>

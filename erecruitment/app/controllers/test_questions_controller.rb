@@ -1,12 +1,10 @@
 class TestQuestionsController < ApplicationController
   before_action :set_test_question, only: [:show, :edit, :update, :destroy]
-  
+
   # GET /test_questions
   # GET /test_questions.json
   def index
-    @my_questions= My_question.paginate(:page => params[:page], :per_page => 1).order(:created_by)
-    #@test_questions = TestQuestion.create(@my_questions.attributes).paginate(:page => params[:page], :per_page => 1).order(:created_by)
-    
+    @test_questions = TestQuestion.all
   end
 
   # GET /test_questions/1

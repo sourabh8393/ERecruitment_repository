@@ -1,5 +1,8 @@
 Erecruitment::Application.routes.draw do
 
+  get "ttestpaper/index"
+  resources :ttest_questions
+
   resources :test_questions
 
   get "candidates/index"

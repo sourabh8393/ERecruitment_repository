@@ -1,10 +1,43 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
- 
-<h1>question paper</h1>
+<h1>Listing test_questions</h1>
 
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Option a</th>
+      <th>Option b</th>
+      <th>Option c</th>
+      <th>Option d</th>
+      <th>Anwser</th>
+      <th>Question type</th>
+      <th>Created by</th>
+      <th>Difficulty level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <% @test_questions.each do |test_question| %>
+      <tr>
+        <td><%= test_question.question %></td>
+        <td><%= test_question.option_a %></td>
+        <td><%= test_question.option_b %></td>
+        <td><%= test_question.option_c %></td>
+        <td><%= test_question.option_d %></td>
+        <td><%= test_question.anwser %></td>
+        <td><%= test_question.question_type %></td>
+        <td><%= test_question.created_by %></td>
+        <td><%= test_question.difficulty_level %></td>
+        <td><%= link_to 'Show', test_question %></td>
+        <td><%= link_to 'Edit', edit_test_question_path(test_question) %></td>
+        <td><%= link_to 'Destroy', test_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= will_paginate @my_questions %>
+<br>
 
+<%= link_to 'New Test question', new_test_question_path %>
