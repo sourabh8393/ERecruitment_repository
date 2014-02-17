@@ -4,7 +4,7 @@ class TtestQuestionsController < ApplicationController
   # GET /ttest_questions
   # GET /ttest_questions.json
   def index
-    @ttest_questions = TtestQuestion.all
+    @ttest_questions = TtestQuestion.paginate(:page => params[:page], :per_page => 1)
   end
 
   # GET /ttest_questions/1
@@ -64,7 +64,7 @@ class TtestQuestionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ttest_question
-      @ttest_question = TtestQuestion.find(params[:id])
+     # @ttest_question = TtestQuestion.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

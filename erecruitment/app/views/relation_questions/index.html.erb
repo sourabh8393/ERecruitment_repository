@@ -1,0 +1,29 @@
+<h1>Listing relation_questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>My question</th>
+      <th>Ttest question</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @relation_questions.each do |relation_question| %>
+      <tr>
+        <td><%= relation_question.my_question_id %></td>
+        <td><%= relation_question.ttest_question_id %></td>
+        <td><%= link_to 'Show', relation_question %></td>
+        <td><%= link_to 'Edit', edit_relation_question_path(relation_question) %></td>
+        <td><%= button_to 'Destroy', relation_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Relation question', new_relation_question_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>My question:</strong>
+  <%= @relation_question.my_question_id %>
+</p>
+
+<p>
+  <strong>Ttest question:</strong>
+  <%= @relation_question.ttest_question_id %>
+</p>
+
+<%= link_to 'Edit', edit_relation_question_path(@relation_question) %> |
+<%= link_to 'Back', relation_questions_path %>

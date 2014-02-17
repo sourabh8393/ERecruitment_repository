@@ -1,5 +1,7 @@
 Erecruitment::Application.routes.draw do
 
+  resources :relation_questions
+
   get "ttestpaper/index"
   resources :ttest_questions
 

@@ -1,2 +1,26 @@
-<h1>Ttestpaper#index</h1>
-<p>Find me in app/views/ttestpaper/index.html.erb</p>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+ 
+<h1>setting question paper</h1>
+
+
+<% @my_questions.each do |my_question| %>
+<div class="entry">
+	 
+<h3><%= my_question.question %></h3>
+<h4><%= radio_button_tag(:my_answer, "option_a") %>
+<%= label_tag(:my_answer_option_a, my_question.option_a) %> </h4>
+
+<h4><%= radio_button_tag(:my_answer, "option_b") %>
+<%= label_tag(:my_answer_option_b, my_question.option_b) %> </h4>
+
+<h4><%= radio_button_tag(:my_answer, "option_c") %>
+<%= label_tag(:my_answer_option_c, my_question.option_c) %> </h4>
+
+<h4><%= radio_button_tag(:my_answer, "option_d") %>
+<%= label_tag(:my_answer_option_d, my_question.option_d) %> </h4>
+
+<%= button_to 'Add to QuestionPaper', relation_questions_path(my_question_id: my_question) %>
+</div>
+<% end %>
